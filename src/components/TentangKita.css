@@ -1,0 +1,102 @@
+.container-kita {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  background-color: #eeee;
+}
+
+.image-container-us {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+}
+
+.video-overlay {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 3px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  padding: 30px;
+  animation: fade-in 1.2s forwards;
+}
+
+.popup-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  padding: 30px;
+}
+
+.responsive-image:hover + .video-overlay {
+  opacity: 1;
+}
+
+/* Mengatur ukuran video overlay pada hover */
+.responsive-image:hover + .video-overlay {
+  width: 100%;
+  height: 100%;
+}
+
+/* Mengatur ukuran video pada hover */
+.responsive-image:hover + .video-overlay .popup-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.popup-video {
+  width: 88%;
+  height: auto;
+}
+
+.image img {
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.ktp {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 30px;
+  padding: 0 30px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.ktp img {
+  width: 430px;
+  height: 185px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .image {
+    max-width: 100%;
+  }
+}

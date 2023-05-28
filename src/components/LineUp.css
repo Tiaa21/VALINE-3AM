@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+}
+
+.popular {
+  background-color: rgb(28, 27, 27);
+  opacity: 1;
+}
+
+.pentagon {
+  position: absolute;
+  border-bottom: 50px solid rgb(28, 27, 27);
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 1200px;
+  margin: auto;
+  left: 160px;
+}
+
+.carousel {
+  margin: 0px;
+  background-color: rgb(28, 27, 27);
+  margin-bottom: -5px;
+}
+
+.slider_title {
+  animation: fadeUp 1.5s;
+  font-family: "Inlanders";
+  font-size: 4vw;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000000;
+  margin: 20px;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+.card-wrapper {
+  animation: fadeUp 1.5s;
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  filter: drop-shadow(4px 4px 2px #000);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card-wrapper:active,
+.card-wrapper:hover,
+.card-wrapper:focus {
+  outline: none;
+  border: none;
+}
+
+.card {
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  padding: -20px;
+}
+
+.card .card-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: #000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card .card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.card:hover img {
+  opacity: 0.4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card:hover .card-image {
+  -webkit-transform: translateY(-100px);
+  transform: translateY(-100px);
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+}
+
+.card:hover li:nth-child(1) a {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.card:hover li:nth-child(2) a {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.card:hover li:nth-child(3) a {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.card:hover li:nth-child(4) a {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.details {
+  position: absolute;
+  background: #273242;
+  width: 100%;
+  height: 120px;
+  z-index: 2;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.details h2 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 60px;
+  color: #ffffff;
+  justify-content: center;
+  max-width: 100%;
+  font-family: "VALORANT", sans-serif;
+}
+
+.card:hover .details {
+  bottom: 0;
+}
+
+.carousel .slick-dots {
+  margin: 0px;
+  background-color: rgb(28, 27, 27);
+}
+
+.slick-dots {
+  padding-bottom: 20px;
+}
+
+.slick-slider {
+  padding-bottom: 20px;
+}
+
+.carousel .slick-dots li button:before {
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  content: "";
+  text-align: center;
+  opacity: 0.8;
+  color: #fff;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel .slick-dots li.slick-active button,
+.carousel .slick-dots li:hover button {
+  border-color: #ff4655;
+}
+
+.carousel .slick-dots li.slick-active button:before,
+.carousel .slick-dots li:hover button:before {
+  background-color: #ff4655;
+  opacity: 1;
+}
+
+.carousel .slick-next {
+  right: 10px;
+}
+
+.carousel .slick-prev {
+  left: 10px;
+  z-index: 1;
+}
+
+.carousel .slick-prev,
+.slick-next {
+  line-height: 1;
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.video-container {
+  position: relative;
+  height: 500px;
+}
+
+.video-container video {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+}
+
+.text-overlay p {
+  font-family: serif;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 2vw;
+  width: 1300px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.text-overlay h1 {
+  font-family: "Inlanders";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ff4655;
+  font-size: 5vw;
+  width: 1300px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ANIMATION */
+
+@media (max-width: 900px) {
+  .pentagon {
+    max-width: 700px;
+    left: 10%;
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "slick-carousel",
+  "version": "0.1.0",
+  "description": "React example starter project",
+  "keywords": [
+    "react",
+    "starter"
+  ],
+  "main": "src/index.js",
+  "private": true,
+  "dependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "babel-loader": "^9.1.2",
+    "emailjs-com": "^3.2.0",
+    "postcss-loader": "^7.3.2",
+    "react-icons": "4.8.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-slick": "^0.27.13",
+    "slick-carousel": "^1.8.1",
+    "source-map-loader": "^4.0.1",
+    "style-loader": "^3.3.3",
+    "styled-components": "6.0.0-rc.1",
+    "swiper": "^6.8.4",
+    "web-vitals": "^1.1.2",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "css-loader": "^6.8.1",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
+  }
+}

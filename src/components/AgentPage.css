@@ -1,0 +1,431 @@
+.selectagent {
+  background-color: #eeee;
+  overflow-x: hidden;
+}
+
+.agent-agent {
+  margin-top: 80px;
+}
+
+.agents {
+  display: block;
+  width: 100%;
+  background-image: url(/src/components/backgroundwiki.webp);
+}
+
+.IconAgent {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 15px;
+}
+
+.App {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 15px;
+}
+
+.App h1 {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 60px;
+  font-family: "Inlanders";
+}
+
+.agent-icon {
+  border: solid 2.5px #999;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  background-color: #fff;
+  width: 7vw;
+  height: 7vw;
+  border: solid 2px #555;
+}
+
+.agent-icon:hover {
+  border: solid 2.5px var(--valo-red);
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  border: solid 2px red;
+}
+
+.agent-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.picagent {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.picagent img {
+  float: center;
+  width: 500px;
+}
+
+.agent-agent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 550px;
+  justify-content: space-around;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.bottom-image {
+  position: absolute;
+  height: 700px;
+  top: -100px;
+  z-index: 1; /* Menempatkan gambar pertama di belakang gambar kedua */
+}
+
+.top-image {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  position: relative;
+  z-index: 2; /* Menempatkan gambar kedua di depan gambar pertama */
+}
+
+.agentdesc {
+  margin-left: 20px;
+  align-item: left;
+  width: 500px;
+}
+
+.agentdesc h1 {
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.agentrole img {
+  margin-top: 20px;
+  margin-right: 10px;
+  width: 15%;
+  height: 15%;
+}
+
+.agentrole {
+  display: flex;
+}
+
+.abilities-container {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ability-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.ability-card {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #555;
+  background-color: #eeee;
+  box-shadow: -10px 0px 0px 0px #ff4655;
+  margin-bottom: 1rem;
+}
+
+.ability-card:hover {
+  background-color: #ff4655;
+  filter: brightness(1);
+  -webkit-filter: brightness(1);
+  cursor: pointer;
+}
+
+.ability-card.selected {
+  position: relative;
+  z-index: 1;
+  border: 2px solid #000;
+}
+
+.icon-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+}
+
+.selected-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.ability-card:hover .selected-overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.selected-overlay h3,
+.selected-overlay p {
+  margin: 0;
+}
+
+.selected-ability {
+  margin-bottom: 100px;
+}
+
+
+.selected-ability h3 {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .ability-card {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .agent-agent {
+    margin-top: 30px;
+  }
+
+  .agentdesc {
+    width: 500px;
+  }
+
+  .agentdesc h1 {
+    font-size: 30px;
+  }
+  .agentrole img {
+    margin-top: 18px;
+    margin-right: 10px;
+    width: 9%;
+    height: 9%;
+  }
+}
+
+@media screen and (max-width: 1136px) {
+  .agentdesc {
+    width: 400px;
+  }
+  .agentrole img {
+    margin-top: 20px;
+    margin-right: 10px;
+    width: 10%;
+    height: 10%;
+  }
+}
+
+@media screen and (max-width: 1036px) {
+  .agent-agent {
+    margin-top: 30px;
+  }
+  .picagent {
+    margin-left: -10px;
+  }
+  .agentdesc {
+    margin-top: 80px;
+    width: 500px;
+  }
+
+  .agentrole img {
+    margin-top: 15px;
+    margin-right: 10px;
+    width: 9%;
+    height: 9%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .picagent {
+    margin-top: 80px;
+  }
+
+  .agentrole img {
+    margin-top: 18px;
+    margin-right: 10px;
+    width: 9%;
+    height: 9%;
+  }
+}
+
+@media screen and (max-width: 616px) {
+  .agent-agent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .bottom-image {
+    position: absolute;
+    height: 500px;
+    top: -70px;
+    z-index: 1; /* Menempatkan gambar pertama di belakang gambar kedua */
+  }
+
+  .picagent {
+    margin-left: 10px;
+  }
+  .picagent img {
+    float: center;
+    width: 400px;
+  }
+  .agentdesc {
+    margin-top: 60px;
+  }
+  .agentdesc {
+    width: 400px;
+    margin-left: 20px;
+  }
+  .agentrole img {
+    margin-top: 18px;
+    margin-right: 10px;
+    width: 9%;
+    height: 9%;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .agent-agent {
+    margin-left: -40px;
+  }
+  .picagent {
+    margin-left: 10px;
+  }
+  .agentdesc {
+    margin-top: 60px;
+    width: 300px;
+  }
+
+  .agentrole img {
+    margin-top: 22px;
+    margin-right: 10px;
+    width: 9%;
+    height: 9%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .agent-agent {
+    margin-left: -70px;
+  }
+  .agentdesc {
+    margin-top: 60px;
+    width: 300px;
+  }
+
+  .agentrole img {
+    margin-top: 22px;
+    margin-right: 10px;
+    width: 9%;
+    height: 9%;
+  }
+}
+
+@media screen and (max-width: 281px) {
+  .agent-agent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .bottom-image {
+    position: absolute;
+    height: 400px;
+    top: -70px;
+    z-index: 1; /* Menempatkan gambar pertama di belakang gambar kedua */
+  }
+
+  .picagent {
+    margin-left: 40px;
+  }
+  .picagent img {
+    float: center;
+    width: 250px;
+  }
+  .agentdesc {
+    margin-top: 60px;
+  }
+  .agentdesc {
+    width: 230px;
+    margin-left: 50px;
+  }
+  .agentdesc h1 {
+    font-size: 10px;
+  }
+  .agentdesc p {
+    font-size: 10px;
+  }
+  .agentrole img {
+    margin-top: 2px;
+    margin-right: 10px;
+    width: 9%;
+    height: 9%;
+  }
+
+  .abilities-container {
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .ability-cards-container {
+    max-width: 250px;
+    padding-left: 30px;
+  }
+
+  .selected-ability {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 473px) {
+  .abilities-container {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .ability-cards-container {
+    max-width: 300px;
+  }
+
+  .selected-ability {
+    padding-left: 20px;
+  }
+}
